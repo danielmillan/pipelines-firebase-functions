@@ -18,7 +18,7 @@ runs:
     - name: Deploy a firebase function
       shell: bash
       run: |
-        CURRENT_PATH=$(pwd)/.github/actions/pipelines-firebase-hosting
+        CURRENT_PATH=$(pwd)/.github/actions/pipelines-firebase-functions
         bash $CURRENT_PATH/deploy-function.sh \
           --firebase-token=${{ inputs.firebase-token }} \
           --resources-name=${{ inputs.resources-name }} \
