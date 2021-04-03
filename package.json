@@ -1,5 +1,5 @@
 {
-  "name": "pipelines-firebase-hosting",
+  "name": "pipelines-firebase-functions",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://danielmillan@github.com/danielmillan/pipelines-firebase-hosting.git"
+    "url": "git+https://danielmillan@github.com/danielmillan/pipelines-firebase-functions.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/danielmillan/pipelines-firebase-hosting/issues"
+    "url": "https://github.com/danielmillan/pipelines-firebase-functions/issues"
   },
-  "homepage": "https://github.com/danielmillan/pipelines-firebase-hosting#readme",
+  "homepage": "https://github.com/danielmillan/pipelines-firebase-functions#readme",
   "dependencies": {
     "firebase-tools": "^9.8.0"
   }
