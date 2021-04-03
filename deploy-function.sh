@@ -38,6 +38,7 @@ if [ -z "$FIREBASE_TOKEN" ] || [ -z "$RESOURCES_NAME" ] || [ -z "$PROJECT_NAME" 
     showValidation
 fi
 
+cd functions
 # Install packages
 npm ci
 sed -i -e "s#PROJECT#$PROJECT_NAME#g" ./.firebaserc
