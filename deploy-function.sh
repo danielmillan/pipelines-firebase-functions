@@ -37,7 +37,7 @@ showValidation() {
 if [ -z "$FIREBASE_TOKEN" ] || [ -z "$RESOURCES_NAME" ] || [ -z "$PROJECT_NAME" ]; then
     showValidation
 fi
-
+cp firebase.json .firebaserc ./functions
 cd functions
 # Install packages
 npm ci
