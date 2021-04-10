@@ -39,6 +39,8 @@ if [ -z "$FIREBASE_TOKEN" ] || [ -z "$RESOURCES_NAME" ] || [ -z "$PROJECT_NAME" 
 fi
 
 # Set path and files config
+pwd
+ls -la
 cd functions
 cp ./.github/actions/pipelines-firebase-functions/.firebaserc ./
 cp ./.github/actions/pipelines-firebase-functions/firebase.json ./
