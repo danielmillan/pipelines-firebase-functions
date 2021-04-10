@@ -37,14 +37,18 @@ showValidation() {
 if [ -z "$FIREBASE_TOKEN" ] || [ -z "$RESOURCES_NAME" ] || [ -z "$PROJECT_NAME" ]; then
     showValidation
 fi
-cp firebase.json .firebaserc ./functions
+
+# Set path and files config
 cd functions
+cp ./.github/actions/pipelines-firebase-functions/.firebaserc ./
+cp ./.github/actions/pipelines-firebase-functions/firebase.json ./
+
 # Install packages
 npm ci
+
+# Set project config
 sed -i -e "s#PROJECT#$PROJECT_NAME#g" ./.firebaserc
-# Create a target
-./node_modules/.bin/firebase functions:config:get --project $PROJECT_NAME --token="$FIREBASE_TOKEN"
-echo "#### Deploying function in $PROJECT_NAME project ####"
+
 # Deploy site in firebase
 ./node_modules/.bin/firebase deploy --token="$FIREBASE_TOKEN" --project $PROJECT_NAME --only functions
 echo "Firebase function deploy !"

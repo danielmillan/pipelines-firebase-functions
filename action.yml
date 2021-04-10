@@ -1,4 +1,8 @@
-name: Firebase for pipelines
+name: Deploy Firebase Function
+author: danielmillan
+branding:
+  icon: box
+  color: blue
 description: This action allows you to deploy a firebase function
 
 inputs:
