@@ -38,10 +38,7 @@ if [ -z "$FIREBASE_TOKEN" ] || [ -z "$RESOURCES_NAME" ] || [ -z "$PROJECT_NAME" 
     showValidation
 fi
 
-# Set path and files config
-pwd
-ls -la
-cd functions
+# Copy files config
 cp ./.github/actions/pipelines-firebase-functions/.firebaserc ./
 cp ./.github/actions/pipelines-firebase-functions/firebase.json ./
 
@@ -53,4 +50,3 @@ sed -i -e "s#PROJECT#$PROJECT_NAME#g" ./.firebaserc
 
 # Deploy site in firebase
 ./node_modules/.bin/firebase deploy --token="$FIREBASE_TOKEN" --project $PROJECT_NAME --only functions
-echo "Firebase function deploy !"
